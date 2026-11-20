@@ -1,0 +1,18 @@
+# Dependencies and generated output
+node_modules/
+coverage/
+dist/
+*.log
+logs/
+
+# Local secrets; only templates belong in Git
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo

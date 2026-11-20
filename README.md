@@ -26,7 +26,7 @@ Natijada 3 yo‘nalish, 6 guruh, 10 fan, 10 o‘qituvchi va 15 talaba yaratiladi
 
 Kirish sahifasidagi «Parolni unutdingizmi?» faol va oldindan Telegramga ulangan hisobga 20 daqiqaga mo‘ljallangan bir martalik havola yuboradi. Telegram ulanmagan foydalanuvchi administratorga murojaat qiladi. Foydalanuvchi mavjudligini oshkor qilmaslik uchun so‘rovga umumiy javob qaytariladi. Parol tiklanganda eski kirish sessiyalari bekor qilinadi.
 
-Backend `.env` faylidagi `FRONTEND_URL` tiklash havolasining boshlang‘ich manzili sifatida ishlatiladi. Vercelga joylangach uni `https://saytingiz.vercel.app` kabi ochiq HTTPS manzilga almashtiring; `localhost` telefondan kompyuteringizga ulanmaydi. Frontend production muhitida `VITE_API_ORIGIN` backendning ochiq HTTPS manzili bo‘lishi kerak. Telegram bot ishlayotgan va foydalanuvchi uni oldindan profil orqali ulagan bo‘lishi kerak.
+Backend `.env` faylidagi `FRONTEND_URL` tiklash havolasining boshlang‘ich manzili sifatida ishlatiladi. Vercelga joylangach uni `https://oxu-digital.vercel.app` kabi ochiq HTTPS manzilga almashtiring; `localhost` telefondan kompyuteringizga ulanmaydi. Frontend production muhitida `VITE_API_ORIGIN` backendning ochiq HTTPS manzili bo‘lishi kerak. Telegram bot ishlayotgan va foydalanuvchi uni oldindan profil orqali ulagan bo‘lishi kerak.
 
 ## Demo ma’lumotlari
 
@@ -76,7 +76,7 @@ Majburiy qiymatlar:
 | --- | --- |
 | `MONGODB_URI` | MongoDB Atlas connection string. Atlas Network Access orqali Render serveridan kirishga ruxsat bering. Tranzaksiyalar uchun replica set kerak. |
 | `JWT_SECRET` | Kuchli tasodifiy secret; Blueprint avtomatik yaratadi. Qo‘lda yaratish: `openssl rand -hex 32`. |
-| `FRONTEND_URL` | Haqiqiy frontend HTTPS origin, masalan `https://your-app.vercel.app`. Oxirida `/` bo‘lmasin. Bir nechta origin vergul bilan ajratiladi. |
+| `FRONTEND_URL` | Haqiqiy frontend HTTPS origin, masalan `https://oxu-digital.vercel.app`. Oxirida `/` bo‘lmasin. Bir nechta origin vergul bilan ajratiladi. |
 | `ADMIN_EMAIL` | Boshlang‘ich administrator emaili. |
 | `ADMIN_PASSWORD` | Boshlang‘ich administrator uchun kuchli parol. Mavjud admin parolini o‘zgartirmaydi. |
 | `ADMIN_NAME` | Administrator ismi. |
@@ -88,3 +88,5 @@ Frontend hosting Environment bo‘limida `VITE_API_ORIGIN=https://YOUR-BACKEND.o
 Deploydan keyin `/health` javobi, administrator login, frontend so‘rovlari va Socket.IO ulanishini tekshiring. Production bazada `seed`, `seed:reset` va reset skriptlarini ishga tushirmang.
 
 Rasmiy hujjatlar: https://render.com/docs/deploy-node-express-app va https://render.com/docs/web-services.
+
+Production frontend: `https://oxu-digital.vercel.app`. Render Environment uchun `FRONTEND_URL=https://oxu-digital.vercel.app` va `TELEGRAM_WEB_APP_URL=https://oxu-digital.vercel.app`. Mavjud Render xizmatida bu qiymatlarni Environment bo‘limida yangilab, qayta deploy qiling.
